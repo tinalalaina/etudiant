@@ -1,0 +1,59 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "tina",
+    "email": "tinalalaina14@gmail.com",
+    "password":"123456",
+    "role":"admin"
+}
+###
+// get all users
+GET http://localhost:5000/users
+
+###
+// get single User
+GET http://localhost:5000/users/c868dc95-15c8-4f27-81d6-057936f9440e
+###
+//update a user eto misy tsy mety
+//reponse: verifier tous ce que tu entre ici car c'est passord qui a fait l'erreur 
+PATCH http://localhost:5000/users/00de6ecc-2be7-4b5d-9567-2d9909bbaf12
+Content-Type: application/json
+
+{
+    "name": " M fikri updated updated",
+    "email": "tinaa@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user"
+}
+
+###
+// delete a user
+DELETE http://localhost:5000/users/63c6b1d1-4938-45cc-87ef-6ba3b335620b
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "tinalalaina14@gmail.com",
+    "password":"123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "tinalalaina14@gmail.com",
+    "password":"123456"
+}
+
+###
+//me
+GET http://localhost:5000/me
+###
+//logOut
+DELETE   http://localhost:5000/logout

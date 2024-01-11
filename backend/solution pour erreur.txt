@@ -1,0 +1,57 @@
+si l'erreur est comme ceci
+--------------------------
+node:internal/errors:484
+    ErrorCaptureStackTrace(err);
+    ^
+
+TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined 
+    at new NodeError (node:internal/errors:393:5)
+    at Function.from (node:buffer:328:9)
+    at Object.verify (C:\Users\tinalalaina\Desktop\final complet react\backend\node_modules\argon2\argon2.js:107:31)
+    at Login (file:///C:/Users/tinalalaina/Desktop/final%20complet%20react/backend/controllers/Auth.js:11:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+
+Node.js v18.12.1
+------------------------
+=>alors la solution est simple
+reponse: verifier tous ce que tu entre sur request.request
+exemple:
+
+###
+//update a user eto misy tsy mety
+//reponse: verifier tous ce que tu entre ici car c'est passord qui a fait l'erreur 
+PATCH http://localhost:5000/users/00de6ecc-2be7-4b5d-9567-2d9909bbaf12
+Content-Type: application/json
+
+{
+    "name": " M fikri updated updated",
+    "email": "tinaa@gmail.com",
+    "passord":"123456",                   => l'erreur trouver
+    "confPassword":"123456",
+    "role":"user"
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+Executing (default): SELECT `uuid`, `name`, `email`, `role` FROM `users` AS `users`;
+file:///C:/Users/tinalalaina/Desktop/final%20complet%20react/backend/controllers/Users.js:48
+    res.sttus(500).json ({msg:error.message});
+        ^
+
+TypeError: res.sttus is not a function
+    at createUser (file:///C:/Users/tinalalaina/Desktop/final%20complet%20react/backend/controllers/Users.js:48:9)
+
+Node.js v18.12.1
+
+
+--------
+reponse:le terminale nous aide a trouver l'erreur ici dans Users.js  48 eme ligne
+sttus     : au lieu de status
