@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "name": "tin",
-    "email": "tinlalaina14@gmail.com",
+    "email": "tin@gmail.com",
     "password":"123456",
     "role":"user"
 }
@@ -48,7 +48,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "tinalalaina14@gmail.com",
+    "email": "tin@gmail.com",
     "password":"123456"
 }
 
@@ -69,6 +69,10 @@ POST http://localhost:5000/products
 Content-Type: application/json
 
 {
-    "name": "produit 1",
-    "price":"123456"
+    "name": "produit 25",
+    "price":"22"
 }
+
+###
+// get one products
+GET http://localhost:5000/products/c3ad6eef-a4c0-40b0-8bb3-7ae6f03059c6
