@@ -46,7 +46,7 @@ export const getProductById = async (req, res)  =>{
       response = await Product.findOne({
         attributes:['uuid','name','price'],
         where:{
-            product: product.id
+            id: product.id
         },
             include:[{
                 model: Users,
@@ -112,9 +112,9 @@ export const updateProduct = async(req, res)  =>{
                 [Op.and]:[{id: product.id},{ userId:req.userId}]
             }
         });
-
+        res.status(200).json({msg:"produit modifier avec succées"});
       }
-       res.status(200).json({msg:"produit modifier avec succées"});
+      
        }
        catch (error){
     res.status(500).json ({msg:error.message});

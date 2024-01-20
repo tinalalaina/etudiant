@@ -2,8 +2,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "tin",
-    "email": "tin@gmail.com",
+    "name": "tinr",
+    "email": "tinr@gmail.com",
     "password":"123456",
     "role":"user"
 }
@@ -13,15 +13,15 @@ GET http://localhost:5000/users
 
 ###
 // get single User
-GET http://localhost:5000/users/c868dc95-15c8-4f27-81d6-057936f9440e
+GET http://localhost:5000/users/39367d73-35a5-4af1-a582-78a6c45a2aac
 ###
 //update a user eto misy tsy mety
 //reponse: verifier tous ce que tu entre ici car c'est passord qui a fait l'erreur 
-PATCH http://localhost:5000/users/00de6ecc-2be7-4b5d-9567-2d9909bbaf12
+PATCH http://localhost:5000/users/39367d73-35a5-4af1-a582-78a6c45a2aac
 Content-Type: application/json
 
 {
-    "name": " M fikri updated updated",
+    "name": "updatedpdated",
     "email": "tinaa@gmail.com",
     "password":"123456",
     "confPassword":"123456",
