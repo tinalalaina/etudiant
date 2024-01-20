@@ -41,7 +41,7 @@ try{
         password: hashPassword,
         role:role
     });
-    res.status(201).json({msg:"creation utilisateur par argon2 reussie"});
+    res.status(201).json({msg:"creation utilisateur  reussie"});
 
 }
 catch (error){

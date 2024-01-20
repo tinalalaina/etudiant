@@ -2,10 +2,10 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "tina",
-    "email": "tinalalaina14@gmail.com",
+    "name": "tin",
+    "email": "tinlalaina14@gmail.com",
     "password":"123456",
-    "role":"admin"
+    "role":"user"
 }
 ###
 // get all users
@@ -33,7 +33,7 @@ Content-Type: application/json
 DELETE http://localhost:5000/users/63c6b1d1-4938-45cc-87ef-6ba3b335620b
 
 ###
-//login user
+//login admin
 POST http://localhost:5000/login
 Content-Type: application/json
 
@@ -43,6 +43,7 @@ Content-Type: application/json
 }
 
 ###
+//login user
 POST http://localhost:5000/login
 Content-Type: application/json
 
