@@ -58,3 +58,17 @@ GET http://localhost:5000/me
 ###
 //logOut
 DELETE   http://localhost:5000/logout
+
+
+###
+// get all products
+GET http://localhost:5000/products
+###
+//creer un produit
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "produit 1",
+    "price":"123456"
+}
