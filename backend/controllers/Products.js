@@ -122,8 +122,36 @@ export const updateProduct = async(req, res)  =>{
     
 }
 
-export const deleteProduct = (req, res)  =>{
+export const deleteProduct = async(req, res)  =>{
+    try {
+        const product = await Product.findOne({
+            where:{
+                uuid: req.params.id
+            }
+            });
+        if(!product) return res.status(404).json({msg:"aucun "});
+        const {name, price } = req.body;
+        if(req.role === "admin") {   
+           await Product.destroy({
+                where:{
+                    id: product.id
+                }
+                });
+        } 
+     else {
+        if(req.userId !== product.userId) return res.status(403).json({msg:'vous n avez pas le droit d accées'})
+        await Product.destroy({
+            where:{
+                [Op.and]:[{id: product.id},{ userId:req.userId}]
+            }
+        });
 
+      }
+       res.status(200).json({msg:"produit supprimer avec succées"});
+       }
+       catch (error){
+    res.status(500).json ({msg:error.message});
+       }
     
 }
 
