@@ -75,4 +75,14 @@ Content-Type: application/json
 
 ###
 // get one products
-GET http://localhost:5000/products/c3ad6eef-a4c0-40b0-8bb3-7ae6f03059c6
+GET http://localhost:5000/products/c3ad6eef-a4c0-40b0-8bb3-7ae6f03059c7
+
+###
+//Modifierr un produit
+PATCH  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "produit MODIFIER",
+    "price":"26"
+}
