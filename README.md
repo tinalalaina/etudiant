@@ -1,3 +1,6 @@
+![1](https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png)
+<center>*********</center>
+
 ![1](https://github.com/tinalalaina/etudiant/blob/main/photo%20final/1.PNG)
 <center>*********</center>
 
